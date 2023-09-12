@@ -1,0 +1,12 @@
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\obj\Debug\Sudoku.csproj.AssemblyReference.cache
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\obj\Debug\Sudoku.csproj.SuggestedBindingRedirects.cache
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\obj\Debug\Sudoku.Form1.resources
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\obj\Debug\Sudoku.Numpad.resources
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\obj\Debug\RapChieuPhim.Properties.Resources.resources
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\obj\Debug\Sudoku.csproj.GenerateResource.cache
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\obj\Debug\Sudoku.csproj.CoreCompileInputs.cache
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\obj\Debug\RapChieuPhim.exe
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\obj\Debug\RapChieuPhim.pdb
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\bin\Debug\RapChieuPhim.exe.config
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\bin\Debug\RapChieuPhim.exe
+D:\tai lieu\Winform LT\BT hang tuan\BT 7-9-2023 (buoi 3)\BT Sudoku (10d)\Winform\RapChieuPhim\bin\Debug\RapChieuPhim.pdb
