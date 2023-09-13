@@ -75,6 +75,7 @@
             // 
             this.button_check.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button_check.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_check.Enabled = false;
             this.button_check.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_check.Location = new System.Drawing.Point(613, 401);
             this.button_check.Name = "button_check";
@@ -82,7 +83,6 @@
             this.button_check.TabIndex = 5;
             this.button_check.Text = "Check";
             this.button_check.UseVisualStyleBackColor = false;
-            this.button_check.Enabled = false;
             this.button_check.Click += new System.EventHandler(this.button_check_Click);
             // 
             // button_exit
@@ -102,6 +102,7 @@
             // 
             this.Solve.BackColor = System.Drawing.Color.Violet;
             this.Solve.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Solve.Enabled = false;
             this.Solve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Solve.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Solve.ForeColor = System.Drawing.Color.Black;
@@ -111,13 +112,13 @@
             this.Solve.TabIndex = 6;
             this.Solve.Text = "Solve";
             this.Solve.UseVisualStyleBackColor = false;
-            this.Solve.Enabled = false;
             this.Solve.Click += new System.EventHandler(this.button_Solve);
             // 
             // Reset
             // 
             this.Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Reset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Reset.Enabled = false;
             this.Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reset.Location = new System.Drawing.Point(613, 348);
             this.Reset.Name = "Reset";
@@ -125,7 +126,6 @@
             this.Reset.TabIndex = 5;
             this.Reset.Text = "Reset";
             this.Reset.UseVisualStyleBackColor = false;
-            this.Reset.Enabled = false;
             this.Reset.Click += new System.EventHandler(this.button_Reset);
             // 
             // Form1
@@ -141,6 +141,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Create_Matrix);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
