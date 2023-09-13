@@ -34,6 +34,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_check = new System.Windows.Forms.Button();
             this.button_exit = new System.Windows.Forms.Button();
+            this.Solve = new System.Windows.Forms.Button();
+            this.Reset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +82,7 @@
             this.button_check.TabIndex = 5;
             this.button_check.Text = "Check";
             this.button_check.UseVisualStyleBackColor = false;
+            this.button_check.Enabled = false;
             this.button_check.Click += new System.EventHandler(this.button_check_Click);
             // 
             // button_exit
@@ -87,13 +90,43 @@
             this.button_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button_exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_exit.Location = new System.Drawing.Point(613, 291);
+            this.button_exit.Location = new System.Drawing.Point(613, 270);
             this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(247, 92);
+            this.button_exit.Size = new System.Drawing.Size(120, 72);
             this.button_exit.TabIndex = 6;
             this.button_exit.Text = "Exit";
             this.button_exit.UseVisualStyleBackColor = false;
             this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
+            // 
+            // Solve
+            // 
+            this.Solve.BackColor = System.Drawing.Color.Violet;
+            this.Solve.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Solve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Solve.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Solve.ForeColor = System.Drawing.Color.Black;
+            this.Solve.Location = new System.Drawing.Point(740, 270);
+            this.Solve.Name = "Solve";
+            this.Solve.Size = new System.Drawing.Size(120, 72);
+            this.Solve.TabIndex = 6;
+            this.Solve.Text = "Solve";
+            this.Solve.UseVisualStyleBackColor = false;
+            this.Solve.Enabled = false;
+            this.Solve.Click += new System.EventHandler(this.button_Solve);
+            // 
+            // Reset
+            // 
+            this.Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Reset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reset.Location = new System.Drawing.Point(613, 348);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(247, 45);
+            this.Reset.TabIndex = 5;
+            this.Reset.Text = "Reset";
+            this.Reset.UseVisualStyleBackColor = false;
+            this.Reset.Enabled = false;
+            this.Reset.Click += new System.EventHandler(this.button_Reset);
             // 
             // Form1
             // 
@@ -101,7 +134,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(866, 506);
+            this.Controls.Add(this.Solve);
             this.Controls.Add(this.button_exit);
+            this.Controls.Add(this.Reset);
             this.Controls.Add(this.button_check);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Create_Matrix);
@@ -120,6 +155,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button_check;
         private System.Windows.Forms.Button button_exit;
+        private System.Windows.Forms.Button Solve;
+        private System.Windows.Forms.Button Reset;
     }
 }
 

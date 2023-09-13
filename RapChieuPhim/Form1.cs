@@ -16,16 +16,26 @@ namespace Sudoku
         {
             InitializeComponent();
         }
+
+        const int n = 3;
+        public string[,] hide = new string[n * n, n * n];
+        public int[,] solve = new int[n * n, n * n];
+        public int[,] map = new int[n*n,n*n];
+        public Button[,] btns = new Button[n*n,n*n];
         #region button event
         private void Create_Matrix_Click(object sender, EventArgs e)
         {
-            gtri = 1;
             GenerateMap();
+            Button create = (Button)sender;
+            create.Enabled = false;
+            button_check.Enabled = true;
+            Reset.Enabled = true;
+            Solve.Enabled = true;
         }
         int gtri;
         private void O1_Click(object sender, MouseEventArgs e)
         {
-            Numpad np = new Numpad();
+            Numpad np = Numpad.Instance;
             np.Show();
             Button btn = sender as Button;
             np.FormClosed += (object s, FormClosedEventArgs ea) =>
@@ -39,12 +49,14 @@ namespace Sudoku
                     }
                     groupBox1.Refresh();
                     btn.Text = gtri.ToString();
+                    btn.ForeColor = Color.Black;
                 }
                 np.Dispose();
             };   
         }
         private void button_check_Click(object sender, EventArgs e)
         {
+            int flag = 0;
             for (int i =0; i < n*n; i++)
             {
                 for (int j = 0; j < n * n; j++)
@@ -52,19 +64,56 @@ namespace Sudoku
                     var btnText = btns[i, j].Text;
                     if (btnText != map[i, j].ToString())
                     {
-                        MessageBox.Show("Sai roi!!! ");
-                        return;
-                    }
+                        flag = 1;
+                        btns[i,j].ForeColor = Color.Red;
+                    }else
+                    {
+                        btns[i, j].ForeColor = Color.Blue;
+                        
+                    }  
                 }
             }
-            MessageBox.Show("Dung roi !!!");
+            if (flag == 0)
+                MessageBox.Show("Dung roi. Chuc mung ban!!!");
+            
         }
         private void button_exit_Click(object sender, EventArgs e) => Close();
-        #endregion
+        private void button_Solve(object sender, EventArgs e)
+        {
+            for (int i = 0; i < n * n; i++)
+            {
+                for (int j = 0; j < n * n; j++)
+                {
+                    if (btns[i, j].Text.Equals(hide[i, j]))
+                        btns[i, j].BackColor = Color.Gray;
+                    else if (btns[i,j].Text == map[i, j].ToString())
+                    {
+                        btns[i, j].BackColor = Color.Yellow;
+                    }
+                    
+                }
+            }
+            for (int i = 0; i < n * n; i++)
+            {
+                for (int j = 0; j < n * n; j++)
+                {
+                    btns[i, j].Text = solve[i, j].ToString();
+                    btns[i, j].Enabled = false;
+                }
+            }
 
-        const int n = 3;
-        public int[,] map = new int[n*n,n*n];
-        public Button[,] btns = new Button[n*n,n*n];
+            Solve.Enabled = false;
+            button_check.Enabled = false;
+        }
+
+        private void button_Reset(object sender, EventArgs e)
+        {
+            GenerateMap();
+            button_check.Enabled = true;
+            Solve.Enabled = true;
+        }
+        
+        #endregion
         #region Tao bang sudoku
         public void GenerateMap()
         {
@@ -106,6 +155,7 @@ namespace Sudoku
 
                     btn.Location = new System.Drawing.Point(17 + i * 47, 22 + j * 40);
                     groupBox1.Controls.Add(btn);
+                    solve[i, j] = map[i, j];
                 }
             }
         }
@@ -259,6 +309,16 @@ namespace Sudoku
                                 break;
                             }
                         }
+                        if (btns[i, j].Text != "")
+                        {
+                            hide[i,j] = btns[i,j].Text;
+                        }
+                            
+                        else
+                        {
+                            hide[i, j] = "-1";
+                        }
+
                         if (N <= 0)
                         {
                             break;
@@ -266,8 +326,9 @@ namespace Sudoku
                     }
                 }
             }
+
             
         } //lam lung lo mot vai vtri trong bang 
-        #endregion  
+        #endregion
     }
 }

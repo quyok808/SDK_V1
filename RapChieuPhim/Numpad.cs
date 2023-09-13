@@ -12,6 +12,20 @@ namespace Sudoku
 {
     public partial class Numpad : Form
     {
+        #region Phục vụ việc chỉ hiển thị 1 form duy nhất trong main
+        private static Numpad instance = null;
+        public static Numpad Instance
+        {
+            get
+            {
+                if (Numpad.instance == null || Numpad.instance.IsDisposed)
+                {
+                    Numpad.instance = new Numpad();
+                }
+                return Numpad.instance;
+            }
+        }
+        #endregion
         public Numpad()
         {
             InitializeComponent();
@@ -25,7 +39,6 @@ namespace Sudoku
             Close();
         }
         private void button_cancel_Click(object sender, EventArgs e) => Close();
-
         private void NumPadDialog_Load(object sender, EventArgs e)
         {
 
